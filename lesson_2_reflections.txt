@@ -1,22 +1,65 @@
 What happens when you initialize a repository? Why do you need to do it?
 
-	Initializing a repository creates a .git folder within the directory you ran `git init`. This is important because this step allows you to begin tracking changes to your files with Git.
+    Initializing a repository creates a .git folder within the directory you ran `git init` in.
+    This is important because this step allows you to begin tracking changes to your files with Git.
+    This is how Git tracks the different versions of your files. Without this step,
+    there would be no version control in that directory.
 
 How is the staging area different from the working directory and the repository?
 What value do you think it offers?
 
-	The staging area is different from the working directory because the staging area holds the contents of the files you want to add to particular commits. You add those files to a commit. The working directory is just the entire folder structure, but that does not mean that you have to stage every file into the staging area. This gives you a lot more customization in terms what files you add.
+    The staging holds the contents of the files you want to add to a particular commit.
+    You add those files the staging area and then commit them to the repository.
+    The working directory is just the entire folder structure,
+    but that does not mean that you have to stage every file into a single commit.
+    This gives you a lot more customization in terms of what files you add in a particular commit.
+    This goes back to the concept of "one logical change per commit." It is a concept
+    that I definitely need to keep in the back of my head.
 
 How can you use the staging area to make sure you have one commit per logical
 change?
 
+    You can use `git diff` and `git diff --staged` to check the files you are committing
+    and check if you have are adding one commit per logical change.
+
+    This will also allow you to take one last second look to see if you are making the changes
+    you want to be making to the repository. You can back out, and then recommit the desired files.
+
 What are some situations when branches would be helpful in keeping your history
 organized? How would branches help?
 
+    Branches would help you in the situation when you want to break off from your current repository
+    and add a new feature or work on something that you are not sure will go into the codebase at the end.
+
+    Once you are done, and if you want to incorporate those changes, you can merge the changes you made into master.
+
+    This could allow you to separate any changes you aren't completely satisfied with, keep master specifically to
+    have a production version that functions as desired.
+
 How do the diagrams help you visualize the branch structure?
+
+    I really enjoyed looking at the branch structure through a diagram.
+
+    It was easier to visualize the structure and it made sense why they were referred to as trees and branches.
 
 What is the result of merging two branches together? Why do we represent it in
 the diagram the way we do?
 
+    The result is a combined commit that has all of the commits for the branches that were merged.
+
+    It essentially creates a single branch with all of the commits.
+
+    It is represented in this manner because that displays that the merge commit is
+    the parent of both of the prior commits from each respective branch.
+
 What are the pros and cons of Git's automatic merging vs. always doing merges
 manually?
+
+    Git's automatic merging allows you to quickly merge different branches together.
+    If there are no differences, or no overlaps, that is fine.
+
+    If there are, having Git auto-merge for us in those scenarios would not be ideal.
+    This could cause issues to arise.
+
+    We don't want Git making too many assumptions in these cases, and it is better for an actual human to take a look,
+    speak with their colleagues if necessary, and then resolve the merge conflict manually.
