@@ -1,0 +1,105 @@
+When would you want to use a remote repository rather than keeping all your work
+local?
+
+    You would use a remote repository when you want to share your work with others.
+    Sharing all your work in a remote repository allows you to collaborate with
+    many other programmers.
+
+    It may be part of your job's work environment where they host their repositories
+    on Github or a similar platform. This would allow you to work with other team
+    members, have them critique your work, and gain their insight on certain problems.
+
+    Recently, I've also found it extremely valuable to store notes online in a GitHub
+    repository to track my own progress as a developer. This added layer of
+    accountability has really made me enjoy programming and improving my skills.
+
+Why might you want to always pull changes manually rather than having Git
+automatically stay up-to-date with your remote repository?
+
+    Having Git automatically stay up to date sounds good, but it may cause additional
+    conflicts depending on where you and your colleagues are in your respective work.
+
+    You should typically know when you want to pull down work and so manually staying
+    on top of it would be the best method.
+
+    It would also prevent you from pulling pulling in broken code that someone may
+    have pushed to the remote repository accidentally.
+
+Describe the differences between forks, clones, and branches. When would you
+use one instead of another?
+
+    Branches allow you to continue development of different features, bug fixes, etc...
+    to a specific repository you are working with. This allows you to continue development
+    of a specific project, but do so in a modular manner. You keep your features
+    separate.
+
+    Cloning is involved when you want to pull down a repository from GitHub. This
+    can be helpful if it is a repository that you are able to contribute to but
+    didn't have on your local machine. This would allow you to begin working and push
+    your work as you make changes. You can create branches if you want to work on
+    any specific features and keep them separate from that of the master branch.
+
+    Forking can be useful when you see a project you want to work on or when you
+    want to tailor a specific project to your own specifications. You can fork
+    the given repository and then clone it onto your own machine to work on.
+    At that point you could create branches to continue development of the project
+    or work directly off master.
+
+What is the benefit of having a copy of the last known state of the remote
+stored locally?
+
+    This can be a good reference for when you are pulling down new commits from
+    a remote repository. If you pull, it could just fast-forward merge.
+    This would happen in the case that the branch that you are merging is an ancestor
+    of the branch you are merging from. Otherwise, you would have to solve a merge
+    conflict.
+
+    Having the last known state can also be critical if you know that you will not
+    have access to the internet for a long period of time. You can update your
+    codebase and merge once you are ready.
+
+    I don't often use `git fetch` then `git merge`, but it is something I may
+    have to get into the habit of so I don't exclusively rely on fast-forward merges.
+
+How would you collaborate without using Git or GitHub? What would be easier,
+and what would be harder?
+
+    I've had to collaborate with different agencies in different countries in the past,
+    and we would often do so via email. This process would often be slow and tedious.
+    It would take several emails to get a point across that could have been made
+    in a brief in-person conversation.
+
+    Git and GitHub allow you collaborate and make the necessary changes and open
+    a pull request when you believe your changes are ready to be merged into the
+    master branch.
+
+    It could make things hard because you may have to understand a different
+    person's approach to solving a particular problem and having to dissect it.
+    You may also have a lot of that similar back and forth if you have to
+    continually fix commits in a pull request before finally merging your work.
+
+When would you want to make changes in a separate branch rather than directly in
+master?  What benefits does each approach have?
+
+    I think developing on a separate branch is useful when you want to implement a
+    new feature that you may want to incorporate into master at a later point.
+
+    I also personally use a separate branch when I am not quite sure how I want
+    to implement something and I am playing around with what I want to do.
+
+    Developing in branches helps you because you are not pushing code that will
+    actively break master. This is especially useful if you are experimenting
+    with different things.
+
+    Developing exclusively on master can be beneficial because the changes you
+    commit will be the changes that everyone is working with. If you work with a
+    large team, there is more possibility of overlap and conflicts to occur. This
+    can somewhat be prevented if people are working on modular pieces of code. I
+    have seen large commits erased due to strictly working off of master. This has
+    made me more cautious in this regard, but if it is a small project, or I am working
+    independently, I will often work directly off of master.
+
+    In a large work environment, working directly off of master may be better in
+    the beginning to get an initial version of whatever you're developing operational
+    and off the ground. Then developers could create their own branches to develop
+    specific features once the groundwork has been laid.
